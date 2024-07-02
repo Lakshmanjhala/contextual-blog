@@ -1,0 +1,121 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    margin: 0;
+    overflow: hidden;
+    background: url(itachi\ uchiha.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+
+.title {
+    font-family: 'Cursive', sans-serif;
+    font-size: 32px;
+    background: linear-gradient(to right, #e8dbdb, #da3535); 
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+    animation: move-title 5s infinite linear;
+}
+
+
+@keyframes move-title {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+
+.sharingan {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.outer-circle, .inner-circle, .center-circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.outer-circle {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    border: 5px solid black;
+}
+
+.inner-circle {
+    width: 50%;
+    height: 50%;
+    background-color: black;
+    top: 25%;
+    left: 25%;
+}
+
+.center-circle {
+    width: 20%;
+    height: 20%;
+    background-color: red;
+    top: 40%;
+    left: 40%;
+    border: 3px solid black;
+}
+
+.comma-shape {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.comma-shape::before {
+    content: '';
+    position: absolute;
+    width: 12.5px;
+    height: 12.5px;
+    background-color: red;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.comma-shape1 {
+    top: 10%;
+    left: 45%;
+    transform:translate3d(-50%);
+    animation: rotate 3s linear infinite;
+}
+
+.comma-shape2 {
+    top: 52%;
+    left: 10%;
+    transform: translateY(-50%);
+    animation: rotate 3s linear infinite;
+}
+
+.comma-shape3 {
+    top: 50%;
+    left: 80%;
+    transform: translateY(-50%);
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg) translateY(-50%);
+    }
+    to {
+        transform: rotate(360deg) translateY(-50%);
+    }
+}
